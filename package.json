@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "cucumber-html-reporter": "^7.1.0",
+    "cypress": "^12.12.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.4.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test:cypress": "cp cypress.config.js.cypress cypress.config.js; cypress run",
+    "test:cucumber": "cp cypress.config.js.cucumber cypress.config.js; cypress run; rm -rf cypress/reports/cucumber-json",
+    "test:report": "mochawesome-merge cypress/reports/cypress-json/.jsons/*.json -o cypress/reports/cypress_report.html.json && marge cypress/reports/cypress_report.html.json -f cypress_report --inline && cp -p mochawesome-report/*.html cypress/reports/ && rm -rf mochawesome-report && rm -rf cypress/reports/cypress-json"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e/cucumber/features/step_definitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
