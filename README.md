@@ -45,29 +45,37 @@ Before running the tests, make sure you have the following installed:
 ## Test Execution
 
 ### Cypress Tests
-To run all Cypress tests, use the following command:
+To run all Cypress tests, use the following command:  
+
 `npm run test:cypress`
 
-To run a specific Cypress test file, use the --spec option:
-`npx run cypress --spec <path/to/spec/file>`
+To run a specific Cypress test file, use the --spec option:  
+
+`cp cypress.config.js.cypress cypress.config.js`
+`npx cypress run --spec <path/to/spec/file>`
 
 ### Cypress HTML Report
-To generate an HTML report for the Cypress test execution, use the following command:
+To generate an HTML report for the Cypress test execution, use the following command:  
+
 `npm run test:report`
 
 This command will generate an HTML report named cypress_report.html and store it in the ***`reports/`*** directory.
 
 ### Cypress with Cucumber Tests
-To run all Cypress+Cucumber tests and generate an HTML report, use the following command:
+To run all Cypress+Cucumber tests and generate an HTML report, use the following command:  
+
 `npm run test:cucumber`
 
 This command will execute all Cypress+Cucumber tests and generate an HTML report named cucumber_report.html in the ***`reports/`*** directory.
 
-To run a specific Cucumber feature file, use the following command:
-`npx test:cucumber <path/to/feature/file>`
+To run a specific Cucumber feature file, use the --spec option:  
+
+`cp cypress.config.js.cucumber cypress.config.js`
+`npx cypress run --spec <path/to/feature/file>`
 
 ### Cypress Test Runner
-To open the Cypress Test Runner with Cypress+Cucumber tests, run the following command:
+To open the Cypress Test Runner with Cypress+Cucumber tests, run the following command:  
+
 `npm run cucumber:open`
 
 This command will launch the Cypress Test Runner for the specified tests. Test specifications and also features can interactively be run and debugged using the Cypress Test Runner interface.
