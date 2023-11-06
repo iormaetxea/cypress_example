@@ -1,4 +1,4 @@
-# CYPRESS TKWW
+# CYPRESS PROJECT EXAMPLE
 
 This project contains end-to-end tests for the Demoblaze Exercises using Cypress and Cypress integrated with Cucumber.
 
@@ -37,7 +37,7 @@ Before running the tests, make sure you have the following installed:
 ## Setup
 
 1. Clone the repository:
-   `git clone https://github.com/iormaetxea/cypress_tkww.git`
+   `git clone https://github.com/iormaetxea/cypress_example.git`
 
 2. Install the dependencies:
     `npm install`
